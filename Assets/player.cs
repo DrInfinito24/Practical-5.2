@@ -12,6 +12,8 @@ public class player : MonoBehaviour
     public AudioClip clip3;
     public GameObject ammoBox;
     public AudioSource playerAudio;
+
+    public  bool ammoCollected = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -62,6 +64,7 @@ public class player : MonoBehaviour
             other.gameObject.SetActive(false);
             playerAudio.clip = clip2;
             playerAudio.Play();
+            ammoCollected = true;
         }
        
     }
